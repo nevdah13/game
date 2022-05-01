@@ -1,0 +1,608 @@
+/*----------------------------------  
+Global Styles
+------------------------------------*/
+
+  
+    body {
+        /* Background pattern from Subtle Patterns */
+        
+        /*one Em roughly ten pixels (16 x 62.5% = 10)*/
+    
+        margin: 0;
+        color: #fff;
+        background-color: #111111;
+        width: 100%;
+        background-size: 100%;
+        line-height: 1.6;
+    }
+    
+
+*,
+*,
+    *:before,
+    *:after{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    }
+    .container1{
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 3em;
+        font-weight: 400;
+    }
+    
+    
+    
+    /*header*/
+    .header1{
+        width: 100%;
+        display: flex;
+        top:0;
+        position: sticky;
+        background-color: #111111;
+        height: 115px;
+        }
+        .header__inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .logo {
+        margin-top: -10px;
+        margin-left: -140px;
+        }
+        .text_menu {
+        font-family: 'Recursive', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        width: 280px;
+        height: 34px;
+        color: #fff;
+        margin-top: -75px;
+        margin-left: -80px;
+        }
+        .menu {
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+        font-size: 18px;
+        z-index: 1;
+        font-family: 'Recursive', sans-serif;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: -75px;
+        }
+        .menu__link {
+        display: inline-block;
+        vertical-align: top;
+        text-decoration: none;
+        color: #fff;
+        border-bottom: 4px solid transparent;
+        padding-bottom: 5px;
+        transition: .3s linear;
+        }
+        .menu__link:hover {
+        border-bottom: 4px solid #6C63FF;
+        }
+        .menu__link.active {
+        border-bottom: 4px solid #6C63FF;
+        }
+        
+        .top_klyaksa{
+            position: absolute;
+            right:0;
+            top: 0;
+            z-index: -1;
+        }  
+   
+
+
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/*margin-top: 5.5em;*/
+    font-size: 50%;
+	letter-spacing: 1.5px;
+	text-align: center;
+	
+}
+
+ul > li {
+	list-style: none;
+}
+
+.card,
+.reset-btn {
+	cursor: pointer;
+}
+
+.btn {
+	border-radius: 1em;
+	border: none;
+	color: #fff;
+	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+	padding:1em;
+}
+
+/*----------------------------------  
+Header
+------------------------------------*/
+
+
+
+/*----------------------------------  
+Section - Score Panel
+------------------------------------*/
+
+.score-panel {
+	font-size: 1.4em;
+	padding: 1em 0 2em;
+    margin-top: -2%;
+}
+
+.star-rating > li {
+	display: inline-block;
+	padding: 0.5em;
+}
+
+.moves-counter {
+	padding: 0.5em;
+    font-size: 30px;
+}
+
+
+.reset-btn {
+	background: #3b32eb;
+    width: 100%;
+    height: 60%;
+    margin-top: 10px;
+   
+
+}
+
+.timer-container {
+	background: #fff;
+	border-radius: 0.5em;
+	color: #000;
+	margin: 0.5em;
+	padding: 0.5em;
+}
+
+.timer {
+	font-size: 2em;
+    margin-top: 10px;
+}
+
+/*----------------------------------  
+Section - Modal
+------------------------------------*/
+/*
+Help with the modal from
+https://www.w3schools.com/howto/howto_css_modals.asp
+*/
+
+/* Modal (background) */
+.modal {
+	/*Hidden by default */
+	display: none;
+	position: fixed;
+	z-index: 99;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	/* Fallback color */
+	background-color: rgb(46, 61, 73);
+	/* With opacity */
+	background-color: rgba(46, 61, 73, 0.6);
+}
+
+/* Modal Content/Box */
+.modal-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	/* 5% from the top and centered */
+	margin: 5% auto;
+	
+	padding-right: 2em;
+	width: 80%;
+}
+
+/* The Close Button */
+.close {
+	align-self: flex-end;
+	color: #28e;
+	font-size: 5em;
+}
+
+.close:hover,
+.close:focus {
+	color: #5cf;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Modal Image*/
+.modal-img {
+	display: inline-block;
+	margin: 1em 0 1em;
+	width: 20em;
+}
+/*
+p.stats {
+	font-weight: 600;
+}
+
+p.stats:last-child {
+	margin-bottom: 1em;
+}
+
+.play-again-btn {
+	background: #28e;
+	margin-bottom: 1em;
+}
+
+/*----------------------------------  
+Deck of Cards
+------------------------------------*/
+/*Mobile first responsivness*/
+.deck {
+	background: linear-gradient(to bottom, rgb(240, 245, 248), rgb(241, 241, 247));
+	border-radius: 1.5em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	height: 35em;
+	margin-bottom: 6em;
+	padding: 0.5em;
+	width: 35em;
+}
+
+.deck,
+.card {
+	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.card {
+	background: #6C63FF;
+	border-radius: 0.5em;
+	height: 7em;
+	width: 7em;
+}
+
+/*
+To disable the color highlight if and img is clicked
+https://stackoverflow.com/questions/21107439/disable-or-change-firefoxs-element-image-highlight-color
+*/
+/*img {
+	user-select: none;
+	width: 6em;
+}*/
+
+.deck img {
+	visibility: hidden;
+}
+
+.deck .card.flip {
+	background: #fff;
+	cursor: default;
+	transform: rotateY(180deg);
+	transition: transform 0.3s linear;
+	pointer-events: none;
+}
+
+.flip img {
+	background: #fff;
+	visibility: visible;
+}
+
+.deck .card.match {
+	background: #fff;
+	visibility: visible;
+	cursor: default;
+	animation: pulse 1s;
+}
+
+.match img {
+	background: #fff;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	80% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+/*---------------------------------- 
+Footer
+------------------------------------*/
+
+/*.footer {
+	color: #666;
+	margin-bottom: 2em;
+}
+
+.footer > p {
+	font-size: 1em;
+	padding: 1em;
+}
+
+.footer a:link,
+.footer a:visited {
+	color: #28e;
+	text-decoration: none;
+}*/
+.line1 {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    margin-top: 180px;
+    }
+    .footer{
+        margin-top: -3.5%;
+    }
+    
+    .general {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    }
+    
+    
+    .text1, .text2, .text3 {
+    font-family: 'Recursive', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+    padding-top: 20px;
+    border-bottom: solid 2px #6C63FF;
+    
+    }
+    
+    .text_information {
+    font-family: 'Recursive', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: #BAAEAE;
+    width: 359px;
+    text-align: left;
+    }
+    
+    .icons1_footer {
+    margin-top: 40px;
+    }
+    
+    .icon1_inst {
+    width: 33px;
+    height: 33px;
+    }
+    .icon2_vk {
+    margin-left: 20px;
+    }
+    
+    .icons_3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center
+    }
+    
+    .icons_4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center
+    }
+    
+    .icons_5 {
+    display: flex;
+    flex-direction: row;
+    align-items: center
+    }
+    
+    .text_locat, .text_tel, .text_mail {
+    margin-left: 20px;
+    
+    font-family: 'Recursive', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: #BAAEAE;
+    }
+    
+    .icons_4, .icons_5 {
+    margin-top: 40px;
+    }
+    
+    .useful_links {
+    display: flex;
+    flex-direction: column;
+    
+    }
+    
+    .links {
+    display: flex;
+    flex-direction: column;
+    line-height: 8px;
+    }
+    
+    .footer__link {
+    font-family: 'Recursive', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: #BAAEAE;
+    text-decoration: none;
+    margin-top: -7px;
+    }
+    
+    .footer__link:hover {
+    color: #3b32eb;
+    transition: .3s;
+    }
+    
+    .texts_footer_down {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-right: 300px;
+    margin-top: 80px;
+    }
+    
+    .text1_footer_down, .text2_footer_down, .text3_footer_down {
+    font-family: 'Recursive', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #BAAEAE;
+    }
+    
+    .text2_footer_down {
+    text-decoration: underline;
+    margin-top: 13px;
+    }
+    
+    .text3_footer_down {
+    text-decoration: underline;
+    margin-left: 450px;
+    margin-top: -45px;
+    }
+    
+    .logo_footer {
+    margin-top: -130px;
+    float: right;
+    }
+    
+    .svyaz {
+    display: flex;
+    flex-direction: column;
+    }
+  
+
+/*---------------------------------- 
+Media Queries
+------------------------------------*/
+
+/*--Tablets-------------------------*/
+@media screen and (min-width: 550px) {
+
+	.deck  {
+		height: 50em;
+		padding: 2em;
+		width: 50em;
+	}
+
+	.card {
+		height: 10em;
+		width: 10em;
+	}
+
+	.deck img {
+		width: 9em;
+	}
+
+	.modal-content h2 {
+		font-size: 4em;
+	}
+
+	.play-again-btn {
+		font-size: 1.8em;
+	}
+}
+
+/*---------------------------------- 
+Desktops
+------------------------------------*/
+@media screen and (min-width: 800px) {
+	.text_button{
+        text-align: center;
+        font-family: 'Recursive', sans-serif;
+        font-size: 18px;
+    }
+    .text_button1{
+        text-align: center;
+        font-family: 'Recursive', sans-serif;
+        font-size: 28px;
+    }
+	h1 {
+		font-size: 6em;
+	}
+
+	/*p {
+		font-size: 2.3em;
+	}*/
+
+	.deck  {
+		height: 70em;
+		width: 70em;
+	}
+
+	.card {
+		height: 15em;
+		width: 15em;
+	}
+
+	.deck img {
+		width: 13em;
+	}
+
+	.reset-btn {
+		font-size: 0.8em;
+	}
+
+	/*.footer {
+		font-size: 1.2em;
+	}*/
+	
+	.modal-content h2 {
+		font-size: 5em;
+	}
+
+	/* Modal Image*/
+	.modal-img {
+		width: 30em;
+	}
+
+	.play-again-btn {
+		font-size: 2em;
+        background-color: #6C63FF;
+	}
+}
+@media only screen and (max-device-width: 992px){
+
+    .general{
+    margin: 1%;
+    
+    }
+    .o_nas {
+    width: 250px;
+    }
+    
+    .svyaz {
+    width: 330px;
+    margin-top: -3px;
+    margin-left: 65px;
+    }
+    .logo{
+    padding-left: 5%;
+    }
+    .footer{
+        margin-top: -5%;
+    }
+        }
+        
